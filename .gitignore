@@ -154,3 +154,7 @@ cython_debug/
 .cache/
 .config/
 .upm/
+images/
+
+# Temp files
+temp.py
