@@ -10,7 +10,7 @@ The site also allows you to view the history of storage visits for any selected 
 
 If an employee is in storage for more than an hour, the system marks this visit as suspicious.
 
-## Установка и запуск сайта
+## Installation and launch of the site
 Download code:
 ```
 git clone https://github.com/vitaliy-pavlenko/django-orm-watching-storage.git
