@@ -1,39 +1,40 @@
 # Пульт охраны банка
 
-Репозиторий с сайтом для урока «Пишем пульт охранника банка» курса [dvmn.org](https://dvmn.org/modules/)
+Repository with a website for the lesson "Writing a bank guard console" course [dvmn.org](https://dvmn.org/modules/).
 
-Это внутренний репозиторий для сотрудника банка «Сияние». Если вы попали в этот репозиторий случайно, то вы не сможете его запустить, т.к. у вас нет доступа к БД, но можете свободно использовать код вёрстки или посмотреть как реализованы запросы к БД.
+This is an internal repository for an employee of the Shining Bank. If you got into this repository by accident, then you will not be able to run it, because. you do not have access to the database, but you can freely use the layout code or see how the database queries are implemented.
 
-Пульт охраны можно подлючить к удалённой базе данных. Сайт выводит список сотрудников банка с активными картами доступа и список тех, кто сейчас находится в хранилище с указанием времени пребывания.
+The control panel can be connected to a remote database. The site displays a list of bank employees with active access cards and a list of those who are currently in the vault, indicating the time of stay.
 
-Также сайт позволяет посмотреть историю посещений хранилища для любого выбранного сотрудника. Для каждого посещения выводится дата, время и продолжительность пребывания в хранилище.
+The site also allows you to view the history of storage visits for any selected employee. For each visit, the date, time, and length of stay in the vault are displayed.
 
-Если сотрудник находится в хранилище более часа, система отмечает данный визит как подозрительный.
+If an employee is in storage for more than an hour, the system marks this visit as suspicious.
 
 ## Установка и запуск сайта
-Скачайте код:
+Download code:
 ```
 git clone https://github.com/vitaliy-pavlenko/django-orm-watching-storage.git
 ```
-Перейдите в каталог проекта:
+Change to the project directory:
 ```
 cd django-orm-watching-storage
 ```
-Установите зависимости в виртуальное окружение:
+Install the dependencies in the virtual environment:
 ```
 pip install -r requirements.txt
 ```
-Создайте .env файл с конфигурацией
+Create .env file with configuration:
+
 ```
 DB_SETTINGS=postgres://USER:PASSWORD@HOST:PORT/NAME
 ```
-Запустите сайт:
+Launch site:
 ```
 python manage.py runserver 8000
 ```
-Откройте сайт в браузере по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+Open the site in a browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-Дополнительные настройки в .env
+Additional settings in .env
 ```
 SECRET_KEY=YOUR_KEY
 DEBUG=true
