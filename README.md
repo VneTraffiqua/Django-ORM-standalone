@@ -1,4 +1,4 @@
-# Пульт охраны банка
+# Bank Security Console
 
 Repository with a website for the lesson "Writing a bank guard console" course [dvmn.org](https://dvmn.org/modules/).
 
