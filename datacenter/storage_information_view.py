@@ -1,8 +1,7 @@
 from django.utils import timezone
-
+from . import helper_script
 from datacenter.models import Visit
 from django.shortcuts import render
-
 
 
 def storage_information_view(request):
@@ -12,8 +11,8 @@ def storage_information_view(request):
         visit_info = {
             'who_entered': visit.passcard,
             'entered_at': timezone.localtime(visit.entered_at),
-            'duration': Visit.format_duration(visit.get_duration()),
-            'is_strange': Visit.is_visit_long(visit),
+            'duration': helper_script.format_duration(visit.get_duration()),
+            'is_strange': visit.is_visit_long(),
         }
         all_non_closed_visits.append(visit_info)
     context = {
