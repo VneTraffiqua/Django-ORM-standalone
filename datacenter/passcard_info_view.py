@@ -5,7 +5,6 @@ from django.utils import timezone
 
 def passcard_info_view(request, passcode):
     passcard = get_object_or_404(Passcard, passcode=passcode)
-    # Программируем здесь
     visits = Visit.objects.filter(passcard=passcard)
     all_visits = []
     for visit in visits:
