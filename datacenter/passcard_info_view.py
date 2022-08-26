@@ -7,7 +7,7 @@ from . import helper_script
 
 def passcard_info_view(request, passcode):
     passcard = get_object_or_404(Passcard, passcode=passcode)
-    visits = Visit.objects.filter(passcard=passcard)
+    visits = Visit.objects.filter(passcard=passcard).order_by('-entered_at')
     all_visits = []
     for visit in visits:
         duration = visit.get_duration()
@@ -18,7 +18,7 @@ def passcard_info_view(request, passcode):
                 'duration': visit_duration,
                 'is_strange': visit.is_visit_long()
             }
-        all_visits.insert(0, this_passcard_visits)
+        all_visits.append(this_passcard_visits)
     context = {
         'passcard': passcard,
         'this_passcard_visits': all_visits
