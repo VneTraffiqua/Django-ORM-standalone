@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 
 def storage_information_view(request):
-    non_closed_visits = Visit.objects.filter(leaved_at=None)
+    non_closed_visits = Visit.objects.filter(leaved_at__isnull=True)
     all_non_closed_visits = []
     for visit in non_closed_visits:
         visit_info = {
