@@ -38,5 +38,5 @@ Additional settings in .env
 ```
 SECRET_KEY=YOUR_KEY
 DEBUG=true
-ALLOWED_HOSTS=host1,host2
+ALLOWED_HOSTS=[host1,host2]
 ```
